@@ -1,43 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: white;
+  transition: 0.3s;
+  height: 90px;
+  box-shadow: 3px 3px 5px;
+}
 .container-fluid > .navbar-brand {
-        margin-left: 50px;
-      }
-      .navbar-nav {
-        margin-left: auto;
-        margin-right: 60px;
-        font-size: 26px;
-      }
-      .navbar-nav > li > a {
-        margin-right: 40px;
-        color: #1FDE8F;
-      }
-      main {
-        background-color: #1FDE8F;
-        width: 100%;
-        height: 570px;
-      }
-      main > img {
-        position: relative;
-        top: -291px;
-        left: 0px;
-        border-top-right-radius: 100vh;
-        width: 850px;
-        height: 570px;
-      }
-      .font-top {
-        position: relative;
-        top: 80px;
-        left: 750px;
-      }
-      .font-top > p {
-        margin-top: 5px;
-        color: #05273F;
-        font-size: 53px;
-        font-weight: bold;
-      }
-      .font-top > h3 {
-        margin-top: 90px;
-        margin-left: 130px;
-        color: #05273F;
-        font-size: 35px;
-        font-weight: bold;
-      }
+  margin-left: 50px;
+}
+.navbar-nav {
+  margin-left: auto;
+  margin-right: 60px;
+  font-size: 26px;
+}
+.navbar-nav > li > a {
+  margin-right: 40px;
+  color: #2cb67d;
+}
+.navbar > img {
+  position: relative;
+  top: -16px;
+  left: 914px;
+}
+main {
+  background-color: #1fde8f;
+  width: 100%;
+  height: 720px;
+}
+main > img {
+  position: relative;
+  top: -366px;
+  left: 0px;
+  border-top-right-radius: 100vh;
+  width: 850px;
+  height: 670px;
+}
+.font-top {
+  position: relative;
+  top: 80px;
+  left: 750px;
+  font-family: Hammersmith One;
+}
+.font-top > p {
+  margin-top: 100px;
+  color: #05273f;
+  font-size: 53px;
+}
+.font-top > h3 {
+  margin-top: 120px;
+  margin-left: 130px;
+  color: #05273f;
+  font-size: 35px;
+}
+.Tentang-kami {
+  width: 100%;
+  height: 1000px;
+}
+.Tentang-kami > img {
+  margin-left: 41%;
+  padding-top: 40px;
+}
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  margin-left: 11%;
+}
+.star > img {
+  margin-right: 150px;
+}
+.isi {
+  margin-top: 50px;
+}
+.left {
+  margin-left: 40px;
+  width: 50%;
+}
+.left > h3 {
+  font-weight: bold;
+  font-family: Fredoka;
+}
+.left > h4 > strong {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Fredoka;
+}
+.right {
+  width: 50%;
+  margin-left: 55px;
+}
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  background-color: #ff3d3d;
+  height: 77px;
+  width: 100%;
+}
+.discount > span {
+  font-size: 36px;
+  color: white;
+}
+.layanan {
+  height: 1020px;
+}
+.layanan-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+}
+.layanan-top > h1 {
+  margin-top: 20px;
+  font-family: Itim;
+  font-size: 60px;
+}
+.gb-layanan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layanan-gambar {
+  border-radius: 20px;
+  background-color: #2ece8c;
+  width: 290px;
+  height: 340px;
+}
+
+.gb1 {
+  position: relative;
+  top: -35px;
+  left: 0px;
+}
+.gb2 {
+  position: relative;
+  top: 50px;
+  left: 0px;
+}
+.isi-layanan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.atas {
+  width: 1200px;
+  justify-content: space-between;
+}
+.bawah {
+  justify-content: space-between;
+  margin-top: 140px;
+  width: 1200px;
+}
+.test {
+  margin-left: 45px;
+  color: white;
+  font-size: 30px;
+  font-family: Itim;
+}
+.test1 {
+  margin-left: 25px;
+  color: white;
+  font-size: 30px;
+  font-family: Itim;
+}
