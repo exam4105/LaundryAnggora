@@ -3,11 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
 .display {
   display: flex;
   align-items: center;
@@ -67,21 +62,17 @@ main {
   height: 720px;
 }
 main > img {
-  position: relative;
-  top: -366px;
-  left: 0px;
   border-top-right-radius: 100vh;
   width: 850px;
-  height: 670px;
+  height: 685px;
+  margin-top: -480px;
 }
 .font-top {
-  position: relative;
-  top: 80px;
-  left: 750px;
+  margin-left: 750px;
   font-family: Hammersmith One;
 }
 .font-top > p {
-  margin-top: 100px;
+  margin-top: 200px;
   color: #05273f;
   font-size: 53px;
 }
@@ -273,6 +264,7 @@ main > img {
     font-weight: 400;
   }
   > input {
+    padding: 10px;
     margin-top: 3px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     width: 354px;
@@ -290,6 +282,7 @@ main > img {
     font-weight: 400;
   }
   > input {
+    padding: 10px;
     margin-top: 3px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     width: 736px;
@@ -307,6 +300,7 @@ main > img {
     font-weight: 400;
   }
   > input {
+    padding: 10px;
     margin-top: 3px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     width: 736px;
