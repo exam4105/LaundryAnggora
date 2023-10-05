@@ -379,7 +379,6 @@
     margin-top: 5%;
   }
   .middle-left-footer {
-    margin-right: auto;
     margin-left: 20%;
   }
   .middle-left-footer > h1 {
@@ -390,12 +389,12 @@
     margin-bottom: 40px;
   }
   .left-footer {
-    margin-left: 10%;
+    margin-left: 5%;
   }
   .middle-right-footer {
     width: 40%;
     margin-top: 75px;
-    margin-right: 20%;
+    margin-left: 40px;
   }
   .left-footer,
   .middle-right-footer > span {
@@ -418,6 +417,11 @@
   .bottom-footer {
     margin-bottom: auto;
     width: 50%;
+  }
+  .right-footer {
+    margin-left: 90px;
+    margin-right: 20px;
+    margin-bottom: 35px;
   }
   .right-footer > img {
     width: 35px;
@@ -832,7 +836,6 @@
   .right-footer > img {
     width: 30px;
     margin-right: 20px;
-    margin-bottom: auto;
   }
   .right-footer > h1 {
     color: #000;
