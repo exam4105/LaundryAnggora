@@ -118,87 +118,131 @@ main {
   font-size: 15px;
   font-weight: 500;
 }
-.avatar {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .password {
-    margin-top: 20px;
-    width: 100%;
-    height: 530px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .password > span {
-    color: var(--theme-color-dark, #464255);
-    font-feature-settings: "clig" off, "liga" off;
-    font-family: Barlow;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  .m-top {
-    margin-top: 30px;
-  }
-  .input-one {
-    color: #939393;
+.dropdown {
+  margin-top: 30px;
+  margin-left: 40px;
+  position: absolute;
+  display: inline-block;
+}
+.dropdown-child {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none;
+  width: 150px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.dropdown-child a {
+  margin-bottom: 12px;
+  color: var(--theme-color-dark, #464255);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-child {
+  margin-top: 15px;
+  margin-left: 110px;
+  display: block;
+}
+.mainmenubtn {
+  display: flex;
+  width: 127px;
+  height: 35px;
+  padding: 10px;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.mainmenubtn > i {
+  margin-left: auto;
+}
+.mainmenubtn:hover > i {
+  transform: rotate(180deg);
+}
+.container {
+  object-fit: contain;
+  width: 100%;
+  height: 640px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+.container > div:nth-child(1),
+.container > div:nth-child(2),
+.container > div:nth-child(3),
+.container > div:nth-child(4) {
+  > label {
+    margin: 15px 0px 0px 43px;
+    color: #010101;
     text-align: center;
-    font-family: Inter;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 3.2px;
-  }
-  .input-two {
-    color: #939393;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
+    font-family: Heebo;
+    font-size: 19px;
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: 2px;
   }
-  .password > input {
-    border-radius: 30px;
-    border: 1px solid #535353;
-    width: 438px;
-    height: 50px;
-    margin-top: 15px;
-    padding-left: 20px;
+  > input {
+    margin-left: 40px;
+    font-size: 17px;
+    font-weight: lighter;
+    padding: 7px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
   }
-  .password > p {
-    color: var(--theme-color-grey-5, #a3a3a3);
-    font-feature-settings: "clig" off, "liga" off;
-    font-family: Barlow;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-top: 30px;
+}
+.container > div:nth-child(5) {
+  > label {
+    margin: 7px 0px 0px 43px;
+    color: #010101;
+    text-align: center;
+    font-family: Heebo;
+    font-size: 19px;
+    font-weight: 400;
   }
-  .password > button {
-    border-radius: 40px;
-    background: #2ece8c;
-    display: flex;
-    width: 438px;
-    height: 50px;
+  > input {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    padding: 7px;
+    margin-top: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+  }
+}
+.container > div:nth-child(6) {
+  > label {
+    margin: 7px 0px 0px 43px;
+    color: #010101;
+    text-align: center;
+    font-family: Heebo;
+    font-size: 19px;
+    font-weight: 400;
+  }
+  > input {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-size: 17px;
     padding: 10px;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 5.04px;
+    margin-top: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 89.4%;
+    min-height: 100px;
+    border-radius: 5px;
   }
-  .password > button:hover {
-    cursor: pointer;
-  }
+}
