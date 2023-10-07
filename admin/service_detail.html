@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+    <script src="admin.js"></script>
     <link rel="stylesheet" href="admin.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Khand:wght@400&display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap"/>
@@ -30,10 +31,88 @@
       <div class="span">
         <div class="p"><span class="top-span">Service Detail</span><br/></div>
       </div>
+      <div class="top-img">
+        <div class="skin">
+          <div class="layanan-gambar flex-col">
+                <img src="../Icon/laundry-machine.png" />
+                <span><center>Laundry Kiloan</center></span>
+          </div>
+          <form>
+            <input id="avalaibleone" type="checkbox" name="optionone" onclick="handleCheckboxClickOne(this)">
+            <label for="option1">avalaible</label><br>
+      
+            <input class="input" id="unavalaibleone" type="checkbox" name="optionone" onclick="handleCheckboxClickOne(this)">
+            <label for="option1">unavalaible</label><br>
+          </form>
+        </div>
+        <div class="skin">
+          <div class="layanan-gambar flex-col">
+                <img src="../Icon/sneakers.png" />
+                <span><center>Laundry Sepatu</center></span>
+          </div>
+          <form>
+            <input id="avalaibletwo" type="checkbox" name="optiontwo" onclick="handleCheckboxClickTwo(this)">
+            <label for="option1">avalaible</label><br>
+      
+            <input class="input" id="unavalaibletwo" type="checkbox" name="optiontwo" onclick="handleCheckboxClickTwo(this)">
+            <label for="option1">unavalaible</label><br>
+          </form>
+        </div>
+        <div class="skin">
+          <div class="layanan-gambar flex-col">
+                <img src="../Icon/double-bed.png" />
+                <span><center>Laundry Springbed</center></span>
+          </div>
+          <form>
+            <input id="avalaiblethree" type="checkbox" name="optionthree" onclick="handleCheckboxClickThree(this)">
+            <label for="option1">avalaible</label><br>
+      
+            <input class="input" id="unavalaiblethree" type="checkbox" name="optionthree" onclick="handleCheckboxClickThree(this)">
+            <label for="option1">unavalaible</label><br>
+          </form>
         </div>
       </div>
+      <div class="bottom-img">
+        <div class="skin">
+          <div class="layanan-gambar flex-col">
+                <img src="../Icon/carpet.png" />
+                <span><center>Laundry Karpet</center></span>
+          </div>
+          <form>
+            <input id="avalaiblefour" type="checkbox" name="optionfour" onclick="handleCheckboxClickFour(this)">
+            <label for="option1">avalaible</label><br>
       
+            <input class="input" id="unavalaiblefour" type="checkbox" name="optionfour" onclick="handleCheckboxClickFour(this)">
+            <label for="option1">unavalaible</label><br>
+          </form>
+        </div>
+        <div class="skin">
+          <div class="layanan-gambar flex-col">
+                <img src="../Icon/school-bag.png" />
+                <span><center>Laundry Tas</center></span>
+          </div>
+          <form>
+            <input id="avalaiblefive" type="checkbox" name="optionfive" onclick="handleCheckboxClickFive(this)">
+            <label for="option1">avalaible</label><br>
       
+            <input class="input" id="unavalaiblefive" type="checkbox" name="optionfive" onclick="handleCheckboxClickFive(this)">
+            <label for="option1">unavalaible</label><br>
+          </form>
+        </div>
+        <div class="skin">
+          <div class="layanan-gambar flex-col">
+                <img src="../Icon/baby-stroller.png" />
+                <span><center>Laundry Stroller</center></span>
+          </div>
+          <form>
+            <input id="avalaiblesix" type="checkbox" name="optionsix" onclick="handleCheckboxClickSix(this)">
+            <label for="option1">avalaible</label><br>
+      
+            <input class="input" id="unavalaiblesix" type="checkbox" name="optionsix" onclick="handleCheckboxClickSix(this)">
+            <label for="option1">unavalaible</label><br>
+          </form>
+        </div>
+      </div>
     </main>
   </body>
 </html>
