@@ -307,6 +307,59 @@
       border-radius: 5px;
     }
   }
+  .multiselect {
+  width: 100%;
+}
+
+.selectBox {
+  width: 100%;
+    height: 40px;
+  position: relative;
+}
+
+.selectBox select {
+  padding: 10px;
+  margin-top: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.overSelect {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#mySelectOptions {
+  display: none;
+  border: 0.5px #7c7c7c solid;
+  background-color: #ffffff;
+  max-height: 150px;
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 7px;
+  border-radius: 10px;
+}
+
+#mySelectOptions label {
+  display: block;
+  font-weight: normal;
+  white-space: nowrap;
+  min-height: 1.2em;
+  background-color: #ffffff00;
+  padding: 0 2.25rem 0 .75rem;
+}
+
+#mySelectOptions label:hover {
+  background-color: #1e90ff;
+}
   .container > button {
     margin-top: 13px;
     width: 100%;
@@ -614,6 +667,7 @@
     position: absolute;
     background-color: rgb(44, 182, 125, 0.1);
     width: 100%;
+    width: 100%;
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -713,6 +767,59 @@
       border-radius: 5px;
     }
   }
+  .multiselect {
+  width: 100%;
+}
+
+.selectBox {
+  width: 100%;
+    height: 40px;
+  position: relative;
+}
+
+.selectBox select {
+  padding: 10px;
+  margin-top: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.overSelect {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#mySelectOptions {
+  display: none;
+  border: 0.5px #7c7c7c solid;
+  background-color: #ffffff;
+  max-height: 150px;
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 7px;
+  border-radius: 10px;
+}
+
+#mySelectOptions label {
+  display: block;
+  font-weight: normal;
+  white-space: nowrap;
+  min-height: 1.2em;
+  background-color: #ffffff00;
+  padding: 0 2.25rem 0 .75rem;
+}
+
+#mySelectOptions label:hover {
+  background-color: #1e90ff;
+}
   .container > button {
     margin-top: 13px;
     width: 100%;
