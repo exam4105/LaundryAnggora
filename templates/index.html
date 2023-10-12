@@ -8,14 +8,39 @@
     <meta name="HandheldFriendly" content="true" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../script/admin.js"></script>
-    <script src="../script/script.js"></script>
-    <link rel="import" href="../script/service_detail.html">
-    <link rel="stylesheet" href="../static/main.css" />
-    <link rel="stylesheet" href="../static/second.css" />
-    <link rel="stylesheet" href="../static/third.css" />
+    <link rel="import" href="../script/service_detail">
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="../static/css/second.css" />
+    <link rel="stylesheet" href="../static/css/third.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+      function tambah(){
+        let nama=$('#nama').val()
+        let whatsapp=$('#whatsapp').val()
+        let jenis_laundry=$('#jenis_laundry').val()
+        let waktu_jemput=$('#waktu_jemput').val()
+        let alamat=$('#alamat').val()
+        let pesan=$('#pesan').val()
+
+        $.ajax({
+          type:'POST',
+          url:'/',
+          data:{
+            nama:nama,
+            whatsapp:whatsapp,
+            jenis_laundry:jenis_laundry,
+            waktu_jemput:waktu_jemput,
+            alamat:alamat,
+            pesan:pesan
+          },
+          success:function(response){
+            alert('berhasil')
+            window.location.href = '/'
+          }
+        })
+      }
+    </script>
     <title>Washee Home Service</title>
   </head>
   <body>
@@ -104,7 +129,7 @@
       </div>
       <div class="isi-layanan flex-col">
         <div class="atas flex-row">
-          <a style="text-decoration: none" href="kiloan.html">
+          <a style="text-decoration: none" href="kiloan">
             <div class="gb-layanan">
               <div class="layanan-gambar flex-col">
                 <img src="../static/Icon/10-percent.png" />
@@ -113,7 +138,7 @@
               </div>
             </div>
           </a>
-          <a style="text-decoration: none" href="sepatu.html">
+          <a style="text-decoration: none" href="sepatu">
             <div class="gb-layanan">
               <div class="layanan-gambar flex-col">
                 <img src="../static/Icon/10-percent.png" />
@@ -122,7 +147,7 @@
               </div>
             </div>
           </a>
-          <a style="text-decoration: none" href="springbed.html">
+          <a style="text-decoration: none" href="springbed">
             <div class="gb-layanan">
               <div class="layanan-gambar flex-col">
                 <img src="../static/Icon/10-percent.png" />
@@ -134,7 +159,7 @@
         </div>
 
         <div class="bawah flex-row">
-          <a style="text-decoration: none" href="karpet.html">
+          <a style="text-decoration: none" href="karpet">
             <div class="gb-layanan">
               <div class="layanan-gambar flex-col">
                 <img src="../static/Icon/10-percent.png" />
@@ -143,7 +168,7 @@
               </div>
             </div>
           </a>
-          <a style="text-decoration: none" href="tas.html">
+          <a style="text-decoration: none" href="tas">
             <div class="gb-layanan">
               <div class="layanan-gambar flex-col">
                 <img src="../static/Icon/10-percent.png" />
@@ -152,7 +177,7 @@
               </div>
             </div>
           </a>
-          <a style="text-decoration: none" href="stroller.html">
+          <a style="text-decoration: none" href="stroller">
             <div class="gb-layanan">
               <div class="layanan-gambar flex-col">
                 <img src="../static/Icon/10-percent.png" />
@@ -175,15 +200,15 @@
             <h3>Pesan sekarang untuk pengalaman laundry luar biasa</h3>
            </div>
           </div>
-           <form class="container" action="" method="">
+           <form class="container" action="" method="post">
             <div>
               <label><strong>Nama</strong></label><br>
-            <input type="text" placeholder="Nama">
+            <input id="nama" type="text" placeholder="Nama">
             </div>
            <div id="myMultiselect" class="multiselect">
             <label><strong>Jenis Laundry</strong></label><br>
       <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea()">
-        <select class="form-select">
+        <select class="form-select" id="jenis_laundry">
           <option></option>
         </select>
         <div class="overSelect"></div>
@@ -199,21 +224,21 @@
     </div>
             <div>
               <label><strong>WhatsApp</strong></label><br>
-            <input type="number" placeholder="WhatsApp">
+            <input id="whatsapp" type="number" placeholder="WhatsApp">
             </div>
             <div>
               <label><strong>Waktu Jemput</strong></label><br>
-            <input type="datetime-local" placeholder="Waktu Jemput">
+            <input id="waktu_jemput" type="datetime-local" placeholder="Waktu Jemput">
             </div>
             <div>
               <label><strong>Alamat</strong></label><br>
-            <input type="text" placeholder="Alamat">
+            <input id="alamat" type="text" placeholder="Alamat">
             </div>
             <div>
               <label><strong>Pesan</strong></label><br>
-            <input type="text" placeholder="Pesan">
+            <input id="pesan" type="text" placeholder="Pesan">
             </div>
-            <button><img src="../static/Icon/fi-rr-truck-side.png">Pesan Sekarang</button>
+            <button type="submit" onclick="tambah()"><img src="../static/Icon/fi-rr-truck-side.png">Pesan Sekarang</button>
           </form>
         </div>
       </div>
