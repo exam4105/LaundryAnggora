@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Khand:wght@400&display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      function showAlert() {
+ alert("Pesanan Berhasil Terselesaikan");
+}
+
+</script>
   </head>
   <body>
     <aside>
-      <a href="/"><img src="../static/img/image2.png" /></a>
+      <a href="order_list"><img src="../static/img/image2.png" /></a>
       <div class="left-span m-top"><a href="#"><span><img src="../static/Icon/list.png"/>Order List</span></a></div>
       <div class="left-span"><a href="service_detail"><span><img src="../static/Icon/check-pen.png"/>Service Detail</span></a></div>
-      <div class="left-span"><a href="completed_order"><span><img src="../static/Icon/Done_round.png"/>Completed Order</span></a></div>
+      <div class="left-span"><a href="/"><span><img src="../static/Icon/Done_round.png"/>Costumer Web</span></a></div>
     </aside>
     <main>
       <div class="top">
@@ -31,54 +39,39 @@
         <div class="p"><span class="top-span">Order List</span><br /></div>
         <span class="bottom-span">Hi, Admin. Welcome back!</span>
       </div>
-      <div class="dropdown">
-        <button class="mainmenubtn">
-          Sabtu<i class="bi bi-chevron-down"></i>
-        </button>
-        <div class="dropdown-child">
-          <a href="order_senin">Senin</a>
-          <hr />
-          <a href="order_selasa">Selasa</a>
-          <hr />
-          <a href="order_rabu">Rabu</a>
-          <hr />
-          <a href="order_kamis">Kamis</a>
-          <hr />
-          <a href="order_jumat">Jum'at</a>
-          <hr />
-          <a href="#">Sabtu</a>
-          <hr />
-          <a href="order_minggu">Minggu</a>
-        </div>
-      </div>
-      <form class="container" action="" method="">
+    
+      {% for def in data%} {% set nama= def.nama%}{% set jenis_laundry= def.jenis_laundry%}{% set whatsapp= def.whatsapp%} {% set waktu_jemput= def.waktu_jemput%} {% set alamat= def.alamat%} {% set pesan= def.pesan%}{% set _id= def._id%}
+      <form class="container" action="" method="post">
         <div>
           <label><strong>Nama</strong></label><br/>
-          <input type="text"/>
+          <input type="text" value="{{nama}}" id="customer_name"/>
         </div>
         <div>
           <label><strong>Jenis Laundry</strong></label><br/>
-          <input type="text"/>
+          <input type="text" value="{{jenis_laundry}}" id="customer_laundry"/>
         </div>
         <div>
           <label><strong>WhatsApp</strong></label><br/>
-          <input type="number"/>
+          <input type="text" value="{{whatsapp}}" id="customer_whatsapp"/>
         </div>
         <div>
           <label><strong>Waktu Jemput</strong></label><br/>
-          <input type="datetime-local"/>
+          <input type="text" value="{{waktu_jemput}}" id="customer_pickup"/>
         </div>
         <div>
           <label><strong>Alamat</strong></label><br/>
-          <input type="text"/>
+          <input type="text" value="{{alamat}}" id="customer_address"/>
         </div>
         <div>
           <label><strong>Pesan</strong></label><br/>
-          <input type="text"/>
+          <input type="text" value="{{pesan}}" id="customer_massage"/>
         </div>
-        <button class="button_submit" type="submit">Completed</button>
-      </form>
-      
+        </form>
+        <div class="link">
+          <a href="delete?_id={{_id}}"><button class="button_submit" onclick="showAlert()" type="submit">Completed</button></a>
+        </div>
+        
+      {%endfor%}
     </main>
   </body>
 </html>
