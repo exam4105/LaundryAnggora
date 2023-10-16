@@ -203,12 +203,12 @@
            <form class="container" action="" method="post">
             <div>
               <label><strong>Nama</strong></label><br>
-            <input id="nama" type="text" placeholder="Nama">
+            <input name="name" id="nama" type="text" placeholder="Nama">
             </div>
            <div id="myMultiselect" class="multiselect">
             <label><strong>Jenis Laundry</strong></label><br>
       <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea()">
-        <select class="form-select" id="jenis_laundry">
+        <select class="form-select" name="laundry" id="jenis_laundry">
           <option></option>
         </select>
         <div class="overSelect"></div>
@@ -224,19 +224,19 @@
     </div>
             <div>
               <label><strong>WhatsApp</strong></label><br>
-            <input id="whatsapp" type="number" placeholder="WhatsApp">
+            <input name="Whatsapp" id="whatsapp" type="number" placeholder="WhatsApp">
             </div>
             <div>
               <label><strong>Waktu Jemput</strong></label><br>
-            <input id="waktu_jemput" type="datetime-local" placeholder="Waktu Jemput">
+            <input name="pickup" id="waktu_jemput" type="datetime-local" placeholder="Waktu Jemput">
             </div>
             <div>
               <label><strong>Alamat</strong></label><br>
-            <input id="alamat" type="text" placeholder="Alamat">
+            <input name="address" id="alamat" type="text" placeholder="Alamat">
             </div>
             <div>
               <label><strong>Pesan</strong></label><br>
-            <input id="pesan" type="text" placeholder="Pesan">
+            <input name="massage" id="pesan" type="text" placeholder="Pesan">
             </div>
             <button type="submit" onclick="tambah()"><img src="../static/Icon/fi-rr-truck-side.png">Pesan Sekarang</button>
           </form>
