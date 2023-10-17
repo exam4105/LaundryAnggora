@@ -55,7 +55,7 @@ def login_required(f):
 @app.before_request
 def before_request():
     if 'logged_in' in session and 'last_activity' in session:
-        if time.time() - session['last_activity'] > 5:
+        if time.time() - session['last_activity'] > 500:
             session.pop('logged_in', None)
             return redirect(url_for('login'))
         else:
@@ -70,7 +70,7 @@ def login():
         if user and user['password'] == request.form['password']:
             session['logged_in'] = True
             session['last_activity'] = time.time()
-            return redirect(url_for('order_list'))
+            return redirect(url_for('page'))
     return render_template('login.html')
 
 @app.route('/logout')
@@ -79,18 +79,67 @@ def logout():
     session.pop('last_activity', None)
     return redirect(url_for('login'))
 
+@app.route('/acc')
+def add():
+    return render_template('create.html')
+
+@app.route('/acc',methods=['POST'])
+def baru():
+    if request.method== 'POST':
+       newdict = ({'username':request.form['Username'], 'password':request.form['Password']})
+       mydb.admin.insert_one(newdict)
+       
+    return render_template('create.html')
+
+@app.route('/account', methods=['GET'])
+def account():
+    data = mydb.admin.find({})
+    
+    return render_template('account.html',data=data)
+
+@app.route('/changepw', methods=['GET'])
+def changepw():
+    id=request.args.get('_id')
+    
+    data=list(mydb.admin.find({'_id':ObjectId(id)}))
+    print(data)
+    return render_template('Changepassword.html',data=data)
+
+@app.route('/changepw', methods=['POST'])
+def ubah():
+    username=request.form.get('username')
+    password=request.form.get('password')
+    id=request.form.get('id')
+    print(username,password)
+
+    my_dict = {'username': username,
+               'password': password}
+    
+    data=list(mydb.admin.find({'_id':ObjectId(id)}))
+    print(data)
+
+    newcol.update_one({'_id':ObjectId(id)},{'$set':my_dict})
+    return render_template('Changepassword.html',data=data)
+
+
+
+@app.route('/delete', methods=['GET'])
+def delete():
+    id=request.args.get('_id')
+    newcol.delete_one({'_id':ObjectId(id)})
+    data=list(mydb.admin.find({}))
+    return render_template('account.html',data=data)
+
+@app.route('/dashboard')
+@login_required
+def page():
+    return render_template('dashboard.html')
+
 @app.route('/order_list')
 @login_required
 def order_list():
     data = mydb.pesanan.find({})
     
-    return render_template('order_list.html',data=data)
-
-@app.route('/delete', methods=['GET'])
-def delete():
-    id=request.args.get('_id')
-    mycol.delete_one({'_id':ObjectId(id)})
-    data=list(mydb.pesanan.find({}))
     return render_template('order_list.html',data=data)
 
 @app.route('/service_detail')

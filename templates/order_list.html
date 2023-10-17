@@ -13,34 +13,45 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
       function showAlert() {
- alert("Pesanan Berhasil Terselesaikan");
-}
+      alert("Pesanan Berhasil Terselesaikan");
+      }
 
 </script>
+<style>
+
+</style>
   </head>
   <body>
     <aside>
-      <a href="/"><img src="../static/img/image2.png" /></a>
-      <div class="left-span m-top"><a href="order_list.html"><span><img src="../static/Icon/list.png"/>Order List</span></a></div>
-      <div class="left-span"><a href="service_detail"><span><img src="../static/Icon/check-pen.png"/>Service Detail</span></a></div>
-      <div class="left-span"><a href="/"><span><img src="../static/Icon/Done_round.png"/>Costumer Web</span></a></div>
+      <a href="/order_list"><img src="../static/img/image2.png" /></a>
+      <div class="left-span m-top"><a href="/dashboard"><span><img src="../static/Icon/layout.png"/>Dashboard</span></a></div>
+      <div class="left-span"><a href="/order_list"><span><img src="../static/Icon/list.png"/>Order List</span></a></div>
+      <div class="left-span"><a href="/"><span><img src="../static/Icon/Done_round.png"/>Customer Web</span></a></div>
+      <div class="left-span"><a href="/account"><span><img src="../static/Icon/fi-rr-unlock.png"/>Account</span></a></div>
     </aside>
     <main>
       <div class="top">
-        <a href=""><img src="../static/Icon/fi-rr-settings.png"/></a>
+        <div class="dropdown">
+            <img src="../static/Icon/fi-rr-settings.png" alt="">
+            <div class="dropdown-content">
+              <a href="/acc"><img src="../static/Icon/user.png">Create Account</a>
+              <hr>
+              <a href="/logout"><img src="../static/Icon/fi-rr-sign-in.png">Log Out</a>
+              <hr>
+            </div>
+        </div>
         <div class="right">
-          <a href="order_list"><img src="../static/Icon/list2.png" /></a>
-          <a href="service_detail"><img src="../static/Icon/ceklis.png" /></a>
-          <a href="/"><img src="../static/Icon/checked-pen2.png" /></a>
+          <a href="/dashboard"><img src="../static/Icon/layout.png" /></a>
+          <a href="/order_list"><img src="../static/Icon/list2.png" /></a>
           <img src="../static/Icon/Ellipse 1.png" />
         </div>
       </div>
+      
       <div class="span">
         <div class="p"><span class="top-span">Order List</span><br /></div>
-        <span class="bottom-span">Hi, Admin. Welcome back!</span>
       </div>
     
-      {% for def in data%} {% set nama= def.nama%}{% set jenis_laundry= def.jenis_laundry%}{% set whatsapp= def.whatsapp%} {% set waktu_jemput= def.waktu_jemput%} {% set alamat= def.alamat%} {% set pesan= def.pesan%}{% set _id= def._id%}
+       {% for def in data%}{% set _id= def._id%}{% set nama= def.nama%}{% set jenis_laundry= def.jenis_laundry%}{% set whatsapp= def.whatsapp%} {% set waktu_jemput= def.waktu_jemput%} {% set alamat= def.alamat%} {% set pesan= def.pesan%}
       <form class="container" action="" method="post">
         <div>
           <label><strong>Nama</strong></label><br/>

@@ -12,22 +12,20 @@
     <link rel="shortcut icon" type="image/png" href="../static/img/image2.png">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
-      function edit(){
+      function baru(){
         let username=$('#username').val()
         let password=$('#password').val()
-        let id=$('#_id').val()
 
         $.ajax({
           type:'POST',
-          url:'/changepw',
+          url:'/acc',
           data:{
             username:username,
-            password:password,
-            id:id
+            password:password
           },
           success:function(response){
-            alert('Data telah berhasil diubah')
-            window.location.href = 'account'
+            alert('Account berhasil dibuat')
+            window.location.href = '/order_list'
           }
         })
       }
@@ -35,7 +33,7 @@
   </head>
   <body>
     <aside>
-      <a href="#"><img src="../static/img/image2.png" /></a>
+      <a href="/acc"><img src="../static/img/image2.png" /></a>
       <div class="left-span m-top"><a href="/dashboard"><span><img src="../static/Icon/layout.png"/>Dashboard</span></a></div>
       <div class="left-span"><a href="/order_list"><span><img src="../static/Icon/list.png"/>Order List</span></a></div>
       <div class="left-span"><a href="/"><span><img src="../static/Icon/Done_round.png"/>Customer Web</span></a></div>
@@ -46,16 +44,17 @@
         <div class="dropdown">
             <img src="../static/Icon/fi-rr-settings.png" alt="">
             <div class="dropdown-content">
-              <a href="/acc"><img src="../static/Icon/user.png">Create Account</a>
+              <a href="/acc"><img src="../static/Icon/fi-rr-unlock.png">Create Account</a>
               <hr>
               <a href="/logout"><img src="../static/Icon/fi-rr-sign-in.png">Log Out</a>
               <hr>
             </div>
         </div>
-        <div class="right">
+       <div class="right">
           <a href="/dashboard"><img src="../static/Icon/layout.png" /></a>
           <a href="/order_list"><img src="../static/Icon/list2.png" /></a>
           <img src="../static/Icon/Ellipse 1.png" />
+        </div>
         </div>
       </div>
       <div class="avatar">
@@ -64,15 +63,12 @@
       
       <form action="" method="post">
       <div class="password">
-        <span>New Username</span>
-        
-        <input type="hidden" value="{{data[0]['_id']}}" id="_id">
-      
-        <input class="input-two" type="text" id="username" value="{{data[0]['username']}}" placeholder="Username"/>
-        <span class="m-top">New Password</span>
-        <input class="input-two" type="password" id="password" value="{{data[0]['password']}}" placeholder="Password"/>
-        <p>Are you sure you want to change your password?</p>
-        <button type="submit" onclick="edit()">SUBMIT</button>
+        <span>Username</span>
+        <input class="input-two" name="Username" type="text" id="username"  placeholder="Username"/>
+        <span class="m-top">Password</span>
+        <input class="input-two" name="Password" type="password" id="password" placeholder="Password"/>
+        <p>Are you sure you want to create an account?</p>
+        <button type="submit" onclick="baru()">Create Account</button>
       </div>
       </form>
       
