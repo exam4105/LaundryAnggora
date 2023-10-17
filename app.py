@@ -6,6 +6,19 @@ import time
 import hashlib
 import requests
 from bson import ObjectId
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+MONGODB_URI = os.environ.get("MONGODB_URI")
+DB_NAME = os.environ.get("DB_NAME")
+
+client = MongoClient(MONGODB_URI)
+db = client[DB_NAME]
+
 
 app = Flask(__name__)
 app.secret_key = b'\xcc^\x91\xea\x17-\xd0W\x03\xa7\xf8J0\xac8\xc5'
@@ -80,6 +93,7 @@ def logout():
     return redirect(url_for('login'))
 
 @app.route('/acc')
+@login_required
 def add():
     return render_template('create.html')
 
@@ -92,12 +106,14 @@ def baru():
     return render_template('create.html')
 
 @app.route('/account', methods=['GET'])
+@login_required
 def account():
     data = mydb.admin.find({})
     
     return render_template('account.html',data=data)
 
 @app.route('/changepw', methods=['GET'])
+@login_required
 def changepw():
     id=request.args.get('_id')
     
