@@ -8,50 +8,111 @@ body {
   background: #e4e7ff;
   display: flex;
 }
-aside {
-  margin-left: 60px;
-  margin-top: 20px;
-  width: 200px;
+@media only screen and (max-width: 1259px) {
+    .password > input {
+    border-radius: 30px;
+    border: 1px solid #535353;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+  }
+  .buttons > a {
+    font-family: Inter;
+    text-decoration: none;
+    font-size: 15px;
 }
-.left-span {
-  display: flex;
-  margin-top: 20px;
+
+.btn2 {
+    margin-left: 6px;
+    margin-right: 5px;
+    border-radius: 40px;
+    background: red;
+    display: flex;
+    width: 40%;
+    height: 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 5.04px;
+  }
   
+  .btn1 {
+    border-radius: 40px;
+    background: #2ece8c;
+    display: flex;
+    width: 40%;
+    height: 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 5.04px;
+    margin-left: 5px;
+  }
 }
-.m-top {
-  margin-top: 30px;
+@media only screen and (min-width: 1260px) {
+  .password > input {
+    border-radius: 30px;
+    border: 1px solid #535353;
+    width: 650px;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+  }
+  .buttons > a {
+    font-family: Inter;
+    text-decoration: none;
 }
-.left-span > a {
-  text-decoration: none;
-  display: flex;
-  margin-left: -20px;
-  margin-top: 10px;
-  height: 40px;
-  width: 190px;
-  border-radius: 20px;
-  padding-left: 10px;
+.btn2 {
+    margin-left: 70px;
+    border-radius: 40px;
+    background: red;
+    display: flex;
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 5.04px;
+  }
+  .btn1 {
+    border-radius: 40px;
+    background: #2ece8c;
+    display: flex;
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 5.04px;
+  }
 }
-.left-span > a:hover {
-  background-color: rgba(0, 255, 150, 0.3);
-}
-.left-span > a > span:hover {
-  font-size: 19px;
-  font-weight: bold;
-}
-.left-span > a > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--theme-color-dark, #464255);
-  font-family: Barlow;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.left-span > a > span > img {
-  margin-right: 10px;
-}
+
 main {
   margin-left: auto;
   margin-right: 30px;
@@ -127,10 +188,7 @@ main {
     height: 400px;
     text-align: center;
   }
-  .buttons > a {
-    font-family: Inter;
-    text-decoration: none;
-}
+  
 .buttons > a:hover {
     transform: scale(1.1);
 }
@@ -168,15 +226,6 @@ main {
     line-height: normal;
     letter-spacing: 2px;
   }
-  .password > input {
-    border-radius: 30px;
-    border: 1px solid #535353;
-    width: 650px;
-    height: 50px;
-    margin-top: 15px;
-    margin-bottom: 40px;
-    padding-left: 20px;
-  }
   .password > p {
     color: var(--theme-color-grey-5, #a3a3a3);
     font-feature-settings: "clig" off, "liga" off;
@@ -193,41 +242,7 @@ main {
     align-items: center;
     flex-direction: row;
   }
-  .btn1 {
-    border-radius: 40px;
-    background: #2ece8c;
-    display: flex;
-    width: 250px;
-    height: 30px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 5.04px;
-  }
-    .btn2 {
-    margin-left: 70px;
-    border-radius: 40px;
-    background: red;
-    display: flex;
-    width: 250px;
-    height: 30px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 5.04px;
-  }
+    
   .password > button:hover {
     cursor: pointer;
   }

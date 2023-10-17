@@ -180,7 +180,7 @@
   }
   .paragraf > p {
     color: rgba(44, 44, 44, 0.62);
-    font-family: Itim;
+    font-family: sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -207,7 +207,7 @@
   }
   .gambar > span {
     margin-top: 10px;
-    margin-left: 30px;
+    text-align: center;
     color: white;
     font-size: 15px;
     font-family: Itim;
@@ -290,12 +290,11 @@
   }
   .paragraf > p {
     color: rgba(44, 44, 44, 0.62);
-    font-family: Itim;
+    font-family: sans-serif;
     font-size: 95%;
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
-    letter-spacing: 2px;
     margin-top: 5%;
   }
   .paragraf > h1 {
@@ -318,7 +317,7 @@
   }
   .gambar > span {
     margin-top: 10px;
-    margin-left: 27%;
+    text-align: center;
     color: white;
     font-size: 100%;
     font-family: Itim;
@@ -401,7 +400,7 @@
   }
   .paragraf > p {
     color: rgba(44, 44, 44, 0.62);
-    font-family: Itim;
+    font-family: sans-serif;
     font-size: 100%;
     font-style: normal;
     font-weight: 700;
@@ -428,6 +427,7 @@
     width: 55%;
   }
   .gambar > span {
+    text-align: center;
     margin-top: 10px;
     color: white;
     font-size: 100%;
@@ -511,7 +511,7 @@
   }
   .paragraf > p {
     color: rgba(44, 44, 44, 0.62);
-    font-family: Itim;
+    font-family: sans-serif;
     font-size: 110%;
     font-style: normal;
     font-weight: 700;
@@ -540,6 +540,7 @@
   }
   .gambar > span {
     margin-top: 10px;
+    text-align: center;
     color: white;
     font-size: 110%;
     font-family: Itim;
@@ -622,7 +623,7 @@
   }
   .paragraf > p {
     color: rgba(44, 44, 44, 0.62);
-    font-family: Itim;
+    font-family: sans-serif;
     font-size: 120%;
     font-style: normal;
     font-weight: 700;
@@ -650,6 +651,7 @@
     width: 60%;
   }
   .gambar > span {
+    text-align: center;
     margin-top: 10px;
     color: white;
     font-size: 120%;
@@ -733,7 +735,7 @@
   }
   .paragraf > p {
     color: rgba(44, 44, 44, 0.62);
-    font-family: Itim;
+    font-family: sans-serif;
     font-size: 130%;
     font-style: normal;
     font-weight: 700;
@@ -761,6 +763,7 @@
     width: 60%;
   }
   .gambar > span {
+    text-align: center;
     margin-top: 10px;
     color: white;
     font-size: 150%;
@@ -861,9 +864,6 @@
     background-color: #1fde8f;
     margin-top: 100px;
     margin-left: 130px;
-  }
-  .gambar > img {
-    margin-top: -60px;
   }
   .gambar > span {
     margin-top: 30px;

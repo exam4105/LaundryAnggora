@@ -121,7 +121,12 @@ def ubah():
     newcol.update_one({'_id':ObjectId(id)},{'$set':my_dict})
     return render_template('Changepassword.html',data=data)
 
-
+@app.route('/hapus', methods=['GET'])
+def hapus():
+    id=request.args.get('_id')
+    mycol.delete_one({'_id':ObjectId(id)})
+    data=list(mydb.pesanan.find({}))
+    return render_template('order_list.html',data=data)
 
 @app.route('/delete', methods=['GET'])
 def delete():
